@@ -11,6 +11,11 @@ public class Example {
 		return "Hello World!";
 	}
 
+	@RequestMapping("/test")
+	String sample() {
+		return "Goodbye world!";
+	}
+
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Example.class, args);
 	}
