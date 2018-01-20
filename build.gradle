@@ -1,0 +1,42 @@
+ buildscript {
+     repositories {
+         mavenCentral()
+         maven { url 'https://repo.spring.io/libs-snapshot' }
+     }
+     dependencies {
+         classpath(
+             'org.springframework.boot:spring-boot-gradle-plugin:2.0.0.BUILD-SNAPSHOT',
+         )
+     }
+ }
+
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// Apply the application plugin to add support for building an application
+apply plugin: 'application'
+
+apply plugin: 'spring-boot'
+
+// In this section you declare where to find the dependencies of your project
+// You can declare any Maven/Ivy/file repository here.
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // This dependency is found on compile classpath of this component and consumers.
+    compile 'com.google.guava:guava:23.0'
+
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'App'
+    }
+}
+
+// Define the main class for the application
+mainClassName = 'App'
