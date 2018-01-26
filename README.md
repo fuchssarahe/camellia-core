@@ -2,7 +2,7 @@
 Backend of version two of Camellia, an application for tea management
 
 # Priorities
-Our main priority is minimizing effort of use, which implies optimizing UI and speed. 
+Our main priority is minimizing effort of use, which implies optimizing UI and speed.
 - inventory management
 - tasting notes (typed)
 - tea history
@@ -84,7 +84,7 @@ Users
   Password
   DisplayName
 ```
-Example - 
+Example -
 Users   |  InHoldings |  Inventories
 Sarah   |  Mike/Work  |  Work
 Mike    |  Cody/Work  |  Home
@@ -96,18 +96,5 @@ Cody    |  Mike/Home  |
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+THIS IS THE ROUTE YOU MUST HIT:
+http://localhost:8080/graphql/schema.json?query=%22apples%22

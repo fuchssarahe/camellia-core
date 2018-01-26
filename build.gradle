@@ -4,6 +4,7 @@ apply plugin: 'java'
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
 
+
 // In this section you declare where to find the dependencies of your project
 // You can declare any Maven/Ivy/file repository here.
 repositories {
@@ -12,6 +13,9 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE")
+
+    compile 'com.graphql-java:graphql-spring-boot-starter:3.9.2'
+    compile 'com.graphql-java:graphql-java-tools:4.3.0'
 
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:23.0'
@@ -24,9 +28,9 @@ jar {
     baseName = 'camellia'
     version =  '2.0'
     manifest {
-        attributes 'Main-Class': 'Example'
+        attributes 'Main-Class': 'home.App'
     }
 }
 
 // Define the main class for the application
-mainClassName = 'Example'
+mainClassName = 'home.App'
